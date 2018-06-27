@@ -1,0 +1,29 @@
+common:
+    chassis_user: "Administrator"
+    chassis_pass: "xxxx"
+    bmc_user: "Administrator"
+    bmc_pass: "xxxx"
+    ftp: "10.197.251.171"
+    ftp_user: "anonymous"
+    ftp_pass: "anonymous"
+    http: "10.197.251.171"
+
+hp:
+    ilo2_version: "2.33"
+    ilo2_firmware: "ilo2_233.bin"
+    ilo3_version: "1.89"
+    ilo3_firmware: "ilo3_189.bin"
+    ilo4_version: "2.60"
+    ilo4_firmware: "ilo4_260.bin"
+    ilo5_version: "1.30"
+    ilo5_firmware: "ilo5_130.bin"
+    c7000_version: "4.80"
+    c7000_firmware: "hpoa480.bin"
+
+dell:
+    m1000e_version: "6.10.200.201804033862"
+    m1000e_firmware: "firmimg_6.10_A00.cmc"
+    idrac8_version: "2.52.52.52"
+    idrac8_firmware: "firmimg.d7"
+    idrac9_version: "3.21.21.21"
+    idrac9_version: "firmimgFIT.d9"
