@@ -52,8 +52,9 @@ func CheckAndUpdate(hostFile string, update bool) (err error) {
 
 			latest := false
 			vendor := strings.ToLower(obj.Vendor())
+			hardware := obj.HardwareType()
 			runningVersion, _ := obj.Version()
-			currentVersion := viper.GetString(fmt.Sprintf("%s.%s_version", vendor, obj.HardwareType()))
+			currentVersion := viper.GetString(fmt.Sprintf("%s.%s_version", vendor, hardware))
 
 			if runningVersion == currentVersion {
 				latest = true
@@ -61,18 +62,18 @@ func CheckAndUpdate(hostFile string, update bool) (err error) {
 
 			if update {
 				if latest {
-					fmt.Printf("device=%s vendor=%s version=%s latest=%t device_update=%t\n", host, vendor, runningVersion, latest, false)
+					fmt.Printf("host=%s vendor=%s hardware=%sversion=%s latest=%t device_update=%t\n", host, vendor, hardware, runningVersion, latest, false)
 				} else {
-					currentFirmware := viper.GetString(fmt.Sprintf("%s.%s_firmware", vendor, obj.HardwareType()))
+					currentFirmware := viper.GetString(fmt.Sprintf("%s.%s_firmware", vendor, hardware))
 					source := viper.GetString(fmt.Sprintf("%s.source", vendor))
 					result, err := obj.UpdateFirmware(source, currentFirmware)
 					if err != nil {
-						fmt.Printf("device=%s vendor=%s version=%s latest=%t device_update=%t err=%s\n", host, vendor, runningVersion, latest, result, err)
+						fmt.Printf("host=%s vendor=%s hardware=%s version=%s latest=%t device_update=%t err=%s\n", host, vendor, hardware, runningVersion, latest, result, err)
 						return
 					}
 				}
 			} else {
-				fmt.Printf("device=%s vendor=%s version=%s latest=%t\n", host, vendor, runningVersion, latest)
+				fmt.Printf("host=%s vendor=%s hardware=%s version=%s latest=%t\n", host, vendor, hardware, runningVersion, latest)
 			}
 		}(&wg)
 	}
