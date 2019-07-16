@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-var cfgFile string
+var cfgFile, hostFile string
 
 var rootCmd = &cobra.Command{
 	Use:   "bmcfwupd",
@@ -28,8 +28,6 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.bmcfwupd.yaml)")
-	rootCmd.AddCommand(chassisCmd)
-	rootCmd.AddCommand(bmcCmd)
 }
 
 func initConfig() {
