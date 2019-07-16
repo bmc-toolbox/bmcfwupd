@@ -10,8 +10,8 @@ hp:
     ilo3_firmware: "ilo3_191.bin"
     ilo4_version: "2.70"
     ilo4_firmware: "ilo4_270.bin"
-    ilo5_version: "1.43"
-    ilo5_firmware: "ilo5_143.bin"
+    ilo5_version: "1.45"
+    ilo5_firmware: "ilo5_145.bin"
     c7000_version: "4.90"
     c7000_firmware: "oa490.bin"
 
