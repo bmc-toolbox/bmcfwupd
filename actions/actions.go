@@ -70,6 +70,8 @@ func CheckAndUpdate(hostFile string, update bool) (err error) {
 					if err != nil {
 						fmt.Printf("host=%s vendor=%s hardware=%s version=%s latest=%t device_update=%t err=%s\n", host, vendor, hardware, runningVersion, latest, result, err)
 						return
+					} else {
+						fmt.Printf("host=%s vendor=%s hardware=%s version=%s latest=%t device_update=%t\n", host, vendor, hardware, runningVersion, latest, result)
 					}
 				}
 			} else {
