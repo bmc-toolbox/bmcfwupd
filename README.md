@@ -1,4 +1,4 @@
-# bmcfwupd - A BMC firmware management tool
+# bmcfwupd - A BMC firmware management tool [![Go Report Card](https://goreportcard.com/badge/github.com/bmc-toolbox/bmcfwupd)](https://goreportcard.com/report/github.com/bmc-toolbox/bmcfwupd)
 
 #### Acknowledgment
 

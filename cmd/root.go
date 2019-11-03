@@ -14,7 +14,7 @@ var cfgFile, hostFile string
 var rootCmd = &cobra.Command{
 	Use:   "bmcfwupd",
 	Short: "BMC firmware updater",
-	Long:  `bmcfwupd is a tool that let you update BMC firwmare`,
+	Long:  `bmcfwupd is a tool that let you update BMC firmware`,
 	//Run: func(cmd *cobra.Command, args []string) {},
 }
 
